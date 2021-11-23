@@ -51,6 +51,9 @@ ul {
 .list {
   text-decoration: none;
 }
+textarea {
+  resize: none;
+}
 
 header {
   border-bottom: 1px solid #ececec;
@@ -561,6 +564,7 @@ img {
 
 .footer-social-list {
   margin-left: 70px;
+  margin-right: 93px;
 }
 
 .footer-social-link {
@@ -745,6 +749,8 @@ button:focus {
   transform: translateY(0);
 }
 
+/* Модальное окно */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -761,6 +767,7 @@ button:focus {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale (1.1);
@@ -809,4 +816,72 @@ button:focus {
 .button-modal:hover,
 .button-modal:focus {
   background-color: white;
+}
+
+.modal-form {
+  outline: 2px solid red;
+  width: 448px;
+  margin: 40px;
+}
+.modal-tittle {
+  color: var(--tittle-color);
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 12px;
+}
+
+.form-field {
+  outline: 1px solid seagreen;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-label {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.form-input {
+  padding-left: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  height: 40px;
+}
+.comment {
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+textarea::placeholder {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/*Формы  */
+
+.tittle-sub {
+  color: var(--primary-white-color);
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
 }

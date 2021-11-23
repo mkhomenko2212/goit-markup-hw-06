@@ -247,6 +247,15 @@
                             </svg></a></li>
                 </ul>
             </div>
+            <form class="footer-form">
+            <div class="subscription">
+                <label for="name" class="footer-sub"> <h3 class="tittle-sub">Подпишитесь на рассылку</h3></label>
+                <div class="form-field">
+                    <input type="mail" name="sub-mail" id="name" placeholder="E-mail" />
+                    <button type="submit" class="sub-button">Подписаться</button>
+                </div>
+            </div>
+        </form>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -254,9 +263,54 @@
 <svg class="close">
     <use href="./images/symbol-defs-modal.svg#icon-close-black-18dp-2-1"></use>
 </svg>
-        </button></div>
+        </button>
+        <form class="modal-form js-speaker-form"> 
+        <h3 class="modal-tittle">Оставьте свои данные, мы вам перезвоним</h3>
+
+            <div class="form-field">
+                <label class="form-label" for="username">Имя</label>
+                <input class="form-input" type="text" name="name" id="username" />
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="tel">Телефон</label>
+                <input class="form-input" type="tel" name="phone-number" id="tel" />  
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="mail">Почта</label>
+                <input class="form-input" type="email" name="mail" id="mail" />
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="comment">Комментарий</label>
+                <textarea class="comment" type="text" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form-field">
+                <input class="form-input" type="checkbox" name="check" id="mail" />
+                <label class="form-label" for="check">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </label>
+                
+            </div>
+    
+        </form></div>       
+      
+        
+
+        </div>
     </div>
     <script src="./js/modal.js"></script>
+    <!-- <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+
+                    e.currentTarget.reset();
+                });
+        })();
+    </script> -->
 </body>
 
 </html>
