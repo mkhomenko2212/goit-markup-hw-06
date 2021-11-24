@@ -871,7 +871,18 @@ textarea::placeholder {
 
   color: rgba(117, 117, 117, 0.5);
 }
+.policy {
+  display: flex;
+  align-items: center;
+}
 
+.policy .form-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  margin-left: 8px;
+}
 /*Формы  */
 
 .tittle-sub {
