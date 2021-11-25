@@ -250,10 +250,12 @@
             <form class="footer-form">
             <div class="subscription">
                 <label for="name" class="footer-sub"> <h3 class="tittle-sub">Подпишитесь на рассылку</h3></label>
-                <div class="form-field">
-                    <input type="mail" name="sub-mail" id="name" placeholder="E-mail" />
-                    <button type="submit" class="sub-button">Подписаться</button>
-                </div>
+                <div class="sub-form-field">
+                    <input type="mail" class="input-footer" name="sub-mail" id="name" placeholder="E-mail" />
+                    <button type="submit" class="sub-button">Подписаться<svg class="icon-sub">
+                    <use href="./images/symbol-defs-6.svg#icon-icon-send"></use>
+                    </svg>
+                </div></button> 
             </div>
         </form>
         </div>
@@ -270,23 +272,32 @@
             <div class="form-field">
                 <label class="form-label" for="username">Имя</label>
                 <input class="form-input" type="text" name="name" id="username" />
+                <svg class="form-icon"> <use href="./images/symbol-defs-6.svg#icon-person-black"></use></svg>
             </div>
             <div class="form-field">
                 <label class="form-label" for="tel">Телефон</label>
-                <input class="form-input" type="tel" name="phone-number" id="tel" />  
+                <input class="form-input" type="tel" name="phone-number" id="tel" />
+                <svg class="form-icon">
+                    <use href="./images/symbol-defs-6.svg#icon-phone-black"></use>
+                </svg>
             </div>
             <div class="form-field">
                 <label class="form-label" for="mail">Почта</label>
                 <input class="form-input" type="email" name="mail" id="mail" />
+                <svg class="form-icon">
+                    <use href="./images/symbol-defs-6.svg#icon-email-black"></use>
+                </svg>
             </div>
             <div class="form-field">
                 <label class="form-label" for="comment">Комментарий</label>
                 <textarea class="comment" type="text" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
             </div>
             <div class="policy">
-                <input class="form-input" type="checkbox" name="check" id="mail" />
-                <label class="form-label" for="check">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </label>
-                
+                <label class="checkbox-label">
+                <input class="checkbox-input" type="checkbox" name="check" />
+                <span class="icon-check"></span>
+                <p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p> </label>
+              </label>  
             </div>
     
         </form></div>       

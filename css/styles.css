@@ -588,6 +588,73 @@ img {
   width: 20px;
   height: 20px;
 }
+
+.tittle-sub {
+  color: var(--primary-white-color);
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.sub-form-field {
+  display: flex;
+}
+
+.input-footer {
+  height: 50px;
+  width: 358px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  background-color: var(--footer-color);
+  color: var(--primary-text-color);
+
+  padding-left: 15px;
+}
+.input-footer::placeholder {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-sub {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+
+  fill: #fff;
+}
 /* Страница Портфолио */
 
 /* Фильтр */
@@ -819,7 +886,7 @@ button:focus {
 }
 
 .modal-form {
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   width: 448px;
   margin: 40px;
 }
@@ -835,7 +902,8 @@ button:focus {
 }
 
 .form-field {
-  outline: 1px solid seagreen;
+  position: relative;
+  /* outline: 1px solid seagreen; */
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -848,13 +916,35 @@ button:focus {
 }
 
 .form-input {
-  padding-left: 12px;
+  padding-left: 42px;
   padding-top: 11px;
   padding-bottom: 11px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   height: 40px;
+}
+.form-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 12px;
+  margin-bottom: 11px;
+
+  width: 18px;
+  height: 18px;
+
+  fill: var(--tittle-color);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-field:focus-within > .form-input {
+  border: 1px solid var(--accent-color);
+  outline: 0;
+  outline-offset: 0;
 }
 .comment {
   height: 120px;
@@ -871,28 +961,45 @@ textarea::placeholder {
 
   color: rgba(117, 117, 117, 0.5);
 }
-.policy {
+
+.form-field:focus-within > .comment {
+  border: 1px solid var(--accent-color);
+  outline: 0;
+  outline-offset: 0;
+}
+/* .policy {
   display: flex;
   align-items: center;
-}
+} */
 
-.policy .form-label {
+.checkbox-label {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 
   margin-left: 8px;
 }
-/*Формы  */
 
-.tittle-sub {
-  color: var(--primary-white-color);
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+.icon-check {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
 
-  margin-bottom: 20px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+
+  margin-right: 8px;
+}
+
+.checkbox-input:checked + .icon-check {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check-2.svg);
+  background-size: contain;
+  background-origin: content-box;
+  border: 2px solid var(--accent-color);
 }
