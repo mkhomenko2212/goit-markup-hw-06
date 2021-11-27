@@ -249,13 +249,13 @@
             </div>
             <form class="footer-form">
             <div class="subscription">
-                <label for="name" class="footer-sub"> <h3 class="tittle-sub">Подпишитесь на рассылку</h3></label>
+                <label for="name" class="tittle-sub">Подпишитесь на рассылку</label>
                 <div class="sub-form-field">
-                    <input type="mail" class="input-footer" name="sub-mail" id="name" placeholder="E-mail" />
+                    <input type="email" class="input-footer" name="sub-mail" id="name" placeholder="E-mail" />
                     <button type="submit" class="sub-button">Подписаться<svg class="icon-sub">
                     <use href="./images/symbol-defs-6.svg#icon-icon-send"></use>
-                    </svg>
-                </div></button> 
+                    </svg></button> 
+                </div>
             </div>
         </form>
         </div>
@@ -290,21 +290,16 @@
             </div>
             <div class="form-field">
                 <label class="form-label" for="comment">Комментарий</label>
-                <textarea class="comment" type="text" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
+                <textarea class="comment" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
             </div>
             <div class="policy">
                 <label class="checkbox-label">
                 <input class="checkbox-input" type="checkbox" name="check" />
                 <span class="icon-check"></span>
-                <p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p> </label>
-              </label>  
+                <span>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span></label>
             </div>
     <button class="form-button" type="submit">Отправить</button>
         </form></div>       
-      
-        
-
-        </div>
     </div>
     <script src="./js/modal.js"></script>
     <!-- <script>
